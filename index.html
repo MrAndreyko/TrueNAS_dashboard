@@ -7,35 +7,80 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div class="hero__content">
-        <p class="eyebrow">TrueNAS Control Center</p>
-        <h1>Unified Dashboard</h1>
-        <p class="subtitle">
-          A single view for storage health, smart home status, and secure remote file access.
-        </p>
-        <div class="hero__meta">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <span class="icon">🧭</span>
           <div>
-            <span class="label">System Status</span>
-            <span class="value">All services online</span>
-          </div>
-          <div>
-            <span class="label">Last Sync</span>
-            <span class="value">2 minutes ago</span>
-          </div>
-          <div>
-            <span class="label">Alerts</span>
-            <span class="value">0 critical</span>
+            <strong>TrueNAS</strong>
+            <span class="label">Unified Console</span>
           </div>
         </div>
-      </div>
-      <div class="hero__actions">
-        <button class="primary">Open TrueNAS Console</button>
-        <button class="ghost">Configure Widgets</button>
-      </div>
-    </header>
+        <nav class="sidebar__nav">
+          <button class="nav-item active"><span class="icon">🏠</span> Dashboard</button>
+          <button class="nav-item"><span class="icon">🗄️</span> Storage</button>
+          <button class="nav-item"><span class="icon">🧠</span> Smart Home</button>
+          <button class="nav-item"><span class="icon">🔒</span> Remote Access</button>
+          <button class="nav-item"><span class="icon">⚙️</span> Settings</button>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="chip ok">All systems normal</div>
+          <div class="sidebar__hint">Placeholder nav · Collapsible later</div>
+        </div>
+      </aside>
 
-    <main>
+      <div class="app-main">
+        <header class="top-bar">
+          <div class="top-bar__left">
+            <span class="icon">📡</span>
+            <div>
+              <span class="label">System Name</span>
+              <span class="value">TrueNAS-Atlas</span>
+            </div>
+          </div>
+          <div class="top-bar__center">
+            <div class="chip">Local Time · 18:42</div>
+            <div class="chip ok">Uptime · 42 days</div>
+            <div class="chip warn">2 advisories</div>
+          </div>
+          <div class="top-bar__right">
+            <button class="ghost toggle">
+              <span>🌗</span>
+              Theme
+            </button>
+            <button class="primary">Launch Admin</button>
+          </div>
+        </header>
+
+        <header class="hero">
+          <div class="hero__content">
+            <p class="eyebrow">TrueNAS Control Center</p>
+            <h1>Unified Dashboard</h1>
+            <p class="subtitle">
+              A single view for storage health, smart home status, and secure remote file access.
+            </p>
+            <div class="hero__meta">
+              <div>
+                <span class="label">System Status</span>
+                <span class="value">All services online</span>
+              </div>
+              <div>
+                <span class="label">Last Sync</span>
+                <span class="value">2 minutes ago</span>
+              </div>
+              <div>
+                <span class="label">Alerts</span>
+                <span class="value">0 critical</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__actions">
+            <button class="primary">Open TrueNAS Console</button>
+            <button class="ghost">Configure Widgets</button>
+          </div>
+        </header>
+
+        <main>
       <section class="tab-bar">
         <div class="tabs">
           <button class="tab active">Overview</button>
@@ -70,6 +115,41 @@
             <span class="label">Storage Forecast</span>
             <span class="value">24 days to 80%</span>
           </div>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <div class="action-card">
+          <span class="icon">🧽</span>
+          <div>
+            <strong>Run scrub now</strong>
+            <p>Start a pool scrub for all disks</p>
+          </div>
+          <button class="ghost">Queue</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">📸</span>
+          <div>
+            <strong>Create snapshot</strong>
+            <p>Quick snapshot of critical datasets</p>
+          </div>
+          <button class="ghost">Create</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">🔁</span>
+          <div>
+            <strong>Restart app</strong>
+            <p>Restart Plex, HA, and VPN services</p>
+          </div>
+          <button class="ghost">Restart</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">☁️</span>
+          <div>
+            <strong>Start backup</strong>
+            <p>Trigger offsite replication now</p>
+          </div>
+          <button class="ghost">Start</button>
         </div>
       </section>
 
@@ -130,6 +210,66 @@
               <div>
                 <strong>Security posture check</strong>
                 <p>MFA enforced for all remote access</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Top Alerts</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="alert-list">
+            <div class="alert danger">
+              <span>🔥</span>
+              <div>
+                <strong>Disk 4 temperature spike</strong>
+                <p>Peak 42°C · check airflow</p>
+              </div>
+            </div>
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Backup queue behind</strong>
+                <p>2 jobs delayed by 45 minutes</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>✅</span>
+              <div>
+                <strong>Scrub completed</strong>
+                <p>0 errors found</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Upcoming Maintenance</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="timeline compact">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>UPS battery test</strong>
+                <p>Friday · 10:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>OS update window</strong>
+                <p>Saturday · 1:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>SMART long test</strong>
+                <p>Sunday · 2:30 AM</p>
               </div>
             </div>
           </div>
@@ -290,6 +430,21 @@
               <span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span><span class="h6"></span>
             </div>
           </div>
+          <div class="line-chart">
+            <span class="sparkline__label">Capacity forecast line</span>
+            <div class="line-chart__plot">
+              <span style="height: 30%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 46%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 74%"></span>
+              <span style="height: 78%"></span>
+            </div>
+          </div>
         </article>
 
         <article class="card">
@@ -319,6 +474,29 @@
               <span>Temp Range</span>
               <strong>28–34°C</strong>
             </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Storage Map</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Drive bay visualization with health color coding.</p>
+          <div class="storage-map">
+            <div class="drive ok">1</div>
+            <div class="drive ok">2</div>
+            <div class="drive ok">3</div>
+            <div class="drive warn">4</div>
+            <div class="drive ok">5</div>
+            <div class="drive ok">6</div>
+            <div class="drive ok">7</div>
+            <div class="drive ok">8</div>
+          </div>
+          <div class="legend">
+            <span><span class="dot ok"></span>Healthy</span>
+            <span><span class="dot warn"></span>Warning</span>
+            <span><span class="dot danger"></span>Critical</span>
           </div>
         </article>
 
@@ -355,6 +533,20 @@
             <span class="badge muted">Placeholder</span>
           </div>
           <p class="card__subtitle">Protection status across critical datasets.</p>
+          <div class="donut-row">
+            <div class="donut" style="--percent: 82">
+              <span>82%</span>
+              <small>Protected</small>
+            </div>
+            <div class="donut warn" style="--percent: 58">
+              <span>58%</span>
+              <small>Offsite</small>
+            </div>
+            <div class="donut danger" style="--percent: 24">
+              <span>24%</span>
+              <small>Needs action</small>
+            </div>
+          </div>
           <div class="list">
             <div>
               <span>Protected</span>
@@ -430,6 +622,35 @@
             <div>
               <span>Outdoor</span>
               <strong>3 cameras streaming</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Room-by-Room Status</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="room-grid">
+            <div class="room-tile">
+              <strong>Living Room</strong>
+              <span>Lights 40% · 23°C</span>
+              <span class="pill ok">Motion</span>
+            </div>
+            <div class="room-tile">
+              <strong>Kitchen</strong>
+              <span>Air quality OK · HVAC Eco</span>
+              <span class="pill">Idle</span>
+            </div>
+            <div class="room-tile">
+              <strong>Garage</strong>
+              <span>Door open · 18°C</span>
+              <span class="pill warn">Alert</span>
+            </div>
+            <div class="room-tile">
+              <strong>Bedroom</strong>
+              <span>Sleep mode · 21°C</span>
+              <span class="pill ok">Quiet</span>
             </div>
           </div>
         </article>
@@ -525,6 +746,31 @@
 
         <article class="card">
           <div class="card__header">
+            <h2>Camera Preview</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="camera-grid">
+            <div class="camera-feed">
+              <span>Front Door</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Backyard</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Garage</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Living Room</span>
+              <div class="camera-skeleton"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
             <h2>Presence &amp; Occupancy</h2>
             <span class="badge muted">Placeholder</span>
           </div>
@@ -549,6 +795,35 @@
             </div>
           </div>
         </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Energy Usage</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Daily consumption and peak hours.</p>
+          <div class="sparkline">
+            <span class="sparkline__label">Weekly energy (kWh)</span>
+            <div class="sparkline__bars">
+              <span style="height: 28%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 54%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 46%"></span>
+            </div>
+          </div>
+          <div class="heatmap">
+            <span>Peak hours heatmap</span>
+            <div class="heatmap__grid">
+              <span class="h1"></span><span class="h2"></span><span class="h2"></span><span class="h3"></span><span class="h4"></span><span class="h4"></span><span class="h5"></span>
+              <span class="h1"></span><span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span>
+              <span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h6"></span><span class="h6"></span>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="grid tab-section">
@@ -559,6 +834,32 @@
           </div>
           <span class="badge muted">Placeholder grouping</span>
         </div>
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>Remote Access Status</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="label">Endpoint</span>
+              <span class="value">vpn.your-domain.com</span>
+            </div>
+            <div>
+              <span class="label">Uptime</span>
+              <span class="value">99.98%</span>
+            </div>
+            <div>
+              <span class="label">Active Sessions</span>
+              <span class="value">6 users</span>
+            </div>
+          </div>
+          <div class="bar"><span style="width: 92%"></span></div>
+          <div class="skeleton-row">
+            <span class="skeleton"></span>
+            <span class="skeleton"></span>
+            <span class="skeleton"></span>
+          </div>
+        </article>
         <article class="card">
           <div class="card__header">
             <h2>Secure File Access</h2>
@@ -611,6 +912,27 @@
 
         <article class="card">
           <div class="card__header">
+            <h2>Recent File Activity</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Edited · /Projects/Designs</span>
+              <span>2 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Uploaded · /Media/2024</span>
+              <span>18 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Shared · /Backups/Offsite</span>
+              <span>1 hour ago</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
             <h2>Security Checklist</h2>
             <span class="badge muted">Placeholder</span>
           </div>
@@ -620,6 +942,27 @@
             <div class="check ok"><span>✓</span> SSL certificate valid</div>
             <div class="check warn"><span>!</span> WAF rules pending</div>
             <div class="check warn"><span>!</span> Geo-fencing disabled</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Most Accessed Datasets</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="progress-list">
+            <div>
+              <span>Media</span>
+              <div class="bar"><span style="width: 92%"></span></div>
+            </div>
+            <div>
+              <span>Projects</span>
+              <div class="bar"><span style="width: 68%"></span></div>
+            </div>
+            <div>
+              <span>SmartHome</span>
+              <div class="bar warn"><span style="width: 48%"></span></div>
+            </div>
           </div>
         </article>
 
@@ -657,6 +1000,32 @@
             </div>
           </div>
         </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Login Location Map</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="map">
+            <div class="map__pin pin-1"></div>
+            <div class="map__pin pin-2"></div>
+            <div class="map__pin pin-3"></div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Seattle</span>
+              <strong>3 sessions</strong>
+            </div>
+            <div>
+              <span>Berlin</span>
+              <strong>1 blocked</strong>
+            </div>
+            <div>
+              <span>Toronto</span>
+              <strong>2 sessions</strong>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="footer-grid">
@@ -687,6 +1056,8 @@
           </ul>
         </article>
       </section>
-    </main>
+      </main>
+    </div>
+  </div>
   </body>
 </html>
