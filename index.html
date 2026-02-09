@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrueNAS Unified Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">TrueNAS Control Center</p>
+        <h1>Unified Dashboard</h1>
+        <p class="subtitle">
+          A single view for storage health, smart home status, and secure remote file access.
+        </p>
+        <div class="hero__meta">
+          <div>
+            <span class="label">System Status</span>
+            <span class="value">All services online</span>
+          </div>
+          <div>
+            <span class="label">Last Sync</span>
+            <span class="value">2 minutes ago</span>
+          </div>
+          <div>
+            <span class="label">Alerts</span>
+            <span class="value">0 critical</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero__actions">
+        <button class="primary">Open TrueNAS Console</button>
+        <button class="ghost">Configure Widgets</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>NAS Overview</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <p class="card__subtitle">Storage, usage, performance, and health indicators.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Used Capacity</span>
+              <span class="value">62% of 48 TB</span>
+            </div>
+            <div>
+              <span class="label">IOPS</span>
+              <span class="value">3.1k read / 1.4k write</span>
+            </div>
+            <div>
+              <span class="label">Snapshots</span>
+              <span class="value">428 retained</span>
+            </div>
+            <div>
+              <span class="label">Network</span>
+              <span class="value">1.6 Gb/s peak</span>
+            </div>
+          </div>
+          <div class="bar">
+            <span style="width: 62%"></span>
+          </div>
+          <div class="list">
+            <div>
+              <span>Pool Health</span>
+              <strong>Optimal</strong>
+            </div>
+            <div>
+              <span>RAID Layout</span>
+              <strong>RAIDZ2 · 6 disks</strong>
+            </div>
+            <div>
+              <span>Drive Temps</span>
+              <strong>28–32°C</strong>
+            </div>
+            <div>
+              <span>Last Scrub</span>
+              <strong>3 days ago</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Storage &amp; Datasets</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Top datasets by usage and growth trends.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Media</span>
+              <span>19.2 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Backups</span>
+              <span>11.8 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Smart Home Logs</span>
+              <span>4.9 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Projects</span>
+              <span>2.6 TB</span>
+            </div>
+          </div>
+          <button class="ghost full">View dataset explorer</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Snapshots &amp; Replication</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Retention schedules and offsite protection.</p>
+          <div class="timeline">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Hourly snapshots</strong>
+                <p>Retain last 48 hours</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Daily replication</strong>
+                <p>Sync to offsite NAS at 2:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Cloud archive</strong>
+                <p>Weekly cold storage export</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>Smart Home Overview</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <p class="card__subtitle">Rooms, automations, security, and energy insights.</p>
+          <div class="grid-mini">
+            <div>
+              <span class="label">Active Devices</span>
+              <span class="value">86 online</span>
+            </div>
+            <div>
+              <span class="label">Energy Today</span>
+              <span class="value">18.4 kWh</span>
+            </div>
+            <div>
+              <span class="label">Security</span>
+              <span class="value">Armed · 12 sensors</span>
+            </div>
+            <div>
+              <span class="label">Scenes</span>
+              <span class="value">7 scheduled</span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Living Room</span>
+              <strong>23°C · Lights 40%</strong>
+            </div>
+            <div>
+              <span>Kitchen</span>
+              <strong>HVAC Eco · Air quality OK</strong>
+            </div>
+            <div>
+              <span>Outdoor</span>
+              <strong>3 cameras streaming</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Automation Queue</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Upcoming workflows synced with NAS events.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Night Mode</span>
+              <span>10:30 PM</span>
+            </div>
+            <div class="stack__item">
+              <span>Snapshot Cleanup</span>
+              <span>11:00 PM</span>
+            </div>
+            <div class="stack__item">
+              <span>Media Library Refresh</span>
+              <span>2:00 AM</span>
+            </div>
+          </div>
+          <button class="ghost full">Manage automations</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Secure File Access</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Remote access hub for web, mobile, and API clients.</p>
+          <div class="list">
+            <div>
+              <span>Custom Domain</span>
+              <strong>your-domain.com</strong>
+            </div>
+            <div>
+              <span>Security Layer</span>
+              <strong>Zero Trust + MFA</strong>
+            </div>
+            <div>
+              <span>Access Methods</span>
+              <strong>Web UI · SFTP · WebDAV</strong>
+            </div>
+            <div>
+              <span>SSL Status</span>
+              <strong>Ready for provisioning</strong>
+            </div>
+          </div>
+          <button class="primary full">Plan remote access</button>
+        </article>
+      </section>
+
+      <section class="footer-grid">
+        <article class="card small">
+          <h3>Alerts &amp; Tasks</h3>
+          <ul>
+            <li>No critical alerts</li>
+            <li>2 informational notifications</li>
+            <li>Next scrub scheduled for Friday</li>
+          </ul>
+        </article>
+        <article class="card small">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Dataset Manager</li>
+            <li>Snapshot Policy</li>
+            <li>Home Assistant</li>
+            <li>VPN &amp; Access</li>
+          </ul>
+        </article>
+        <article class="card small">
+          <h3>Ideas for Next Iteration</h3>
+          <ul>
+            <li>Interactive storage map</li>
+            <li>Live camera tiles</li>
+            <li>Automations health heatmap</li>
+            <li>File access onboarding wizard</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
