@@ -36,6 +36,93 @@
     </header>
 
     <main>
+      <section class="utility-bar">
+        <div class="search">
+          <span class="label">Global Search</span>
+          <div class="search__field">
+            <span>🔎</span>
+            <input type="text" placeholder="Search datasets, snapshots, devices, automations..." />
+          </div>
+        </div>
+        <div class="status-cards">
+          <div class="status-card">
+            <span class="label">Notifications</span>
+            <span class="value">2 info · 1 warning</span>
+          </div>
+          <div class="status-card">
+            <span class="label">Remote Latency</span>
+            <span class="value">28 ms avg</span>
+          </div>
+          <div class="status-card">
+            <span class="label">Storage Forecast</span>
+            <span class="value">24 days to 80%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card alert-panel">
+          <div class="card__header">
+            <h2>Notification Center</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <div class="alert-list">
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Pool scrub overdue</strong>
+                <p>Last scrub completed 9 days ago</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Smart Home firmware update</strong>
+                <p>3 devices ready for update</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Remote access onboarding</strong>
+                <p>Custom domain verified</p>
+              </div>
+            </div>
+          </div>
+          <button class="ghost full">Open notifications</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>What Changed Recently</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="timeline compact">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Dataset policy updated</strong>
+                <p>Retention extended to 90 days</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Automation updated</strong>
+                <p>Night mode now triggers at 10:45 PM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Security posture check</strong>
+                <p>MFA enforced for all remote access</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <section class="grid">
         <article class="card highlight">
           <div class="card__header">
@@ -63,6 +150,19 @@
           </div>
           <div class="bar">
             <span style="width: 62%"></span>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">Capacity trend (30 days)</span>
+            <div class="sparkline__bars">
+              <span style="height: 35%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 68%"></span>
+            </div>
           </div>
           <div class="list">
             <div>
@@ -142,6 +242,129 @@
           </div>
         </article>
 
+        <article class="card">
+          <div class="card__header">
+            <h2>Capacity Forecast</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Predictive view of storage growth.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Growth Rate</span>
+              <span class="value">+1.8 TB / month</span>
+            </div>
+            <div>
+              <span class="label">Time to 80%</span>
+              <span class="value">24 days</span>
+            </div>
+            <div>
+              <span class="label">Time to Full</span>
+              <span class="value">4.2 months</span>
+            </div>
+          </div>
+          <div class="heatmap">
+            <span>Usage Heatmap (weeks)</span>
+            <div class="heatmap__grid">
+              <span class="h1"></span><span class="h2"></span><span class="h3"></span><span class="h2"></span><span class="h4"></span><span class="h5"></span><span class="h4"></span>
+              <span class="h1"></span><span class="h2"></span><span class="h2"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span>
+              <span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span><span class="h6"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Disk &amp; RAID Health</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Per-disk SMART status and RAID alerts.</p>
+          <div class="chip-row">
+            <span class="chip ok">Disk 1 · OK</span>
+            <span class="chip ok">Disk 2 · OK</span>
+            <span class="chip ok">Disk 3 · OK</span>
+            <span class="chip warn">Disk 4 · 1 warning</span>
+            <span class="chip ok">Disk 5 · OK</span>
+            <span class="chip ok">Disk 6 · OK</span>
+          </div>
+          <div class="list">
+            <div>
+              <span>RAID Status</span>
+              <strong>RAIDZ2 · Resilver 0%</strong>
+            </div>
+            <div>
+              <span>SMART Alerts</span>
+              <strong>1 pending sector</strong>
+            </div>
+            <div>
+              <span>Temp Range</span>
+              <strong>28–34°C</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Performance Hotspots</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Top datasets and services consuming I/O.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Media Library</span>
+              <span>42% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>VM Host</span>
+              <span>27% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>Backup Jobs</span>
+              <span>18% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>Smart Home Logs</span>
+              <span>9% I/O</span>
+            </div>
+          </div>
+          <button class="ghost full">Open performance analyzer</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Backup Coverage</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Protection status across critical datasets.</p>
+          <div class="list">
+            <div>
+              <span>Protected</span>
+              <strong>8 datasets</strong>
+            </div>
+            <div>
+              <span>Unprotected</span>
+              <strong>2 datasets</strong>
+            </div>
+            <div>
+              <span>Last Offsite Sync</span>
+              <strong>4 hours ago</strong>
+            </div>
+          </div>
+          <div class="progress-list">
+            <div>
+              <span>Media</span>
+              <div class="bar"><span style="width: 100%"></span></div>
+            </div>
+            <div>
+              <span>Projects</span>
+              <div class="bar"><span style="width: 72%"></span></div>
+            </div>
+            <div>
+              <span>Home Assistant</span>
+              <div class="bar warn"><span style="width: 35%"></span></div>
+            </div>
+          </div>
+        </article>
+
         <article class="card highlight">
           <div class="card__header">
             <h2>Smart Home Overview</h2>
@@ -184,6 +407,37 @@
 
         <article class="card">
           <div class="card__header">
+            <h2>Critical Sensors</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Alerts from safety and security sensors.</p>
+          <div class="alert-list">
+            <div class="alert danger">
+              <span>🚨</span>
+              <div>
+                <strong>Water leak detected</strong>
+                <p>Basement sensor triggered 4 minutes ago</p>
+              </div>
+            </div>
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Garage open</strong>
+                <p>Open for 2 hours</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Smoke detectors OK</strong>
+                <p>All 6 detectors online</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
             <h2>Automation Queue</h2>
             <span class="badge muted">Placeholder</span>
           </div>
@@ -203,6 +457,68 @@
             </div>
           </div>
           <button class="ghost full">Manage automations</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Automation Health</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Latency and failures across routines.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Failed Today</span>
+              <span class="value">2 routines</span>
+            </div>
+            <div>
+              <span class="label">Avg Latency</span>
+              <span class="value">1.8s</span>
+            </div>
+            <div>
+              <span class="label">Queued Jobs</span>
+              <span class="value">4 pending</span>
+            </div>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">Automation latency</span>
+            <div class="sparkline__bars">
+              <span style="height: 20%"></span>
+              <span style="height: 28%"></span>
+              <span style="height: 35%"></span>
+              <span style="height: 22%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 30%"></span>
+              <span style="height: 26%"></span>
+              <span style="height: 34%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Presence &amp; Occupancy</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">House status and occupancy breakdown.</p>
+          <div class="chip-row">
+            <span class="chip ok">Mode · Home</span>
+            <span class="chip">Rooms occupied · 4</span>
+            <span class="chip">Guests · 1</span>
+          </div>
+          <div class="list">
+            <div>
+              <span>Living Room</span>
+              <strong>Occupied</strong>
+            </div>
+            <div>
+              <span>Office</span>
+              <strong>Occupied</strong>
+            </div>
+            <div>
+              <span>Bedroom</span>
+              <strong>Vacant</strong>
+            </div>
+          </div>
         </article>
 
         <article class="card">
@@ -230,6 +546,80 @@
             </div>
           </div>
           <button class="primary full">Plan remote access</button>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="card__header">
+            <h2>Access Audit</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Recent logins and suspicious activity.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>New login · iOS</span>
+              <span>Seattle · 12 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Failed login</span>
+              <span>Berlin · 1 hour ago</span>
+            </div>
+            <div class="stack__item">
+              <span>API token refresh</span>
+              <span>Home network · 3 hours ago</span>
+            </div>
+          </div>
+          <button class="ghost full">Review audit logs</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Security Checklist</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Hardening tasks for remote access.</p>
+          <div class="checklist">
+            <div class="check ok"><span>✓</span> MFA enforced</div>
+            <div class="check ok"><span>✓</span> SSL certificate valid</div>
+            <div class="check warn"><span>!</span> WAF rules pending</div>
+            <div class="check warn"><span>!</span> Geo-fencing disabled</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Remote Access Latency</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Endpoint responsiveness by region.</p>
+          <div class="stats">
+            <div>
+              <span class="label">US West</span>
+              <span class="value">28 ms</span>
+            </div>
+            <div>
+              <span class="label">US East</span>
+              <span class="value">41 ms</span>
+            </div>
+            <div>
+              <span class="label">EU Central</span>
+              <span class="value">86 ms</span>
+            </div>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">24h latency</span>
+            <div class="sparkline__bars">
+              <span style="height: 30%"></span>
+              <span style="height: 32%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 38%"></span>
+              <span style="height: 34%"></span>
+              <span style="height: 28%"></span>
+              <span style="height: 26%"></span>
+            </div>
+          </div>
         </article>
       </section>
 
