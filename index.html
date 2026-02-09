@@ -36,6 +36,19 @@
     </header>
 
     <main>
+      <section class="tab-bar">
+        <div class="tabs">
+          <button class="tab active">Overview</button>
+          <button class="tab">NAS &amp; Storage</button>
+          <button class="tab">Smart Home</button>
+          <button class="tab">Remote Access</button>
+        </div>
+        <div class="tab-hint">
+          <span class="label">Tabbed Layout</span>
+          <span class="value">Placeholders · No wiring yet</span>
+        </div>
+      </section>
+
       <section class="utility-bar">
         <div class="search">
           <span class="label">Global Search</span>
@@ -123,7 +136,14 @@
         </article>
       </section>
 
-      <section class="grid">
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>NAS &amp; Storage</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
         <article class="card highlight">
           <div class="card__header">
             <h2>NAS Overview</h2>
@@ -364,7 +384,16 @@
             </div>
           </div>
         </article>
+      </section>
 
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>Smart Home</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
         <article class="card highlight">
           <div class="card__header">
             <h2>Smart Home Overview</h2>
@@ -520,7 +549,16 @@
             </div>
           </div>
         </article>
+      </section>
 
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>Remote Access</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
         <article class="card">
           <div class="card__header">
             <h2>Secure File Access</h2>
@@ -547,9 +585,7 @@
           </div>
           <button class="primary full">Plan remote access</button>
         </article>
-      </section>
 
-      <section class="grid">
         <article class="card">
           <div class="card__header">
             <h2>Access Audit</h2>
