@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrueNAS Unified Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="sidebar__brand">
+          <span class="icon">🧭</span>
+          <div>
+            <strong>TrueNAS</strong>
+            <span class="label">Unified Console</span>
+          </div>
+        </div>
+        <nav class="sidebar__nav">
+          <button class="nav-item active"><span class="icon">🏠</span> Dashboard</button>
+          <button class="nav-item"><span class="icon">🗄️</span> Storage</button>
+          <button class="nav-item"><span class="icon">🧠</span> Smart Home</button>
+          <button class="nav-item"><span class="icon">🔒</span> Remote Access</button>
+          <button class="nav-item"><span class="icon">⚙️</span> Settings</button>
+        </nav>
+        <div class="sidebar__footer">
+          <div class="chip ok">All systems normal</div>
+          <div class="sidebar__hint">Placeholder nav · Collapsible later</div>
+        </div>
+      </aside>
+
+      <div class="app-main">
+        <header class="top-bar">
+          <div class="top-bar__left">
+            <span class="icon">📡</span>
+            <div>
+              <span class="label">System Name</span>
+              <span class="value">TrueNAS-Atlas</span>
+            </div>
+          </div>
+          <div class="top-bar__center">
+            <div class="chip">Local Time · 18:42</div>
+            <div class="chip ok">Uptime · 42 days</div>
+            <div class="chip warn">2 advisories</div>
+          </div>
+          <div class="top-bar__right">
+            <button class="ghost toggle">
+              <span>🌗</span>
+              Theme
+            </button>
+            <button class="primary">Launch Admin</button>
+          </div>
+        </header>
+
+        <header class="hero">
+          <div class="hero__content">
+            <p class="eyebrow">TrueNAS Control Center</p>
+            <h1>Unified Dashboard</h1>
+            <p class="subtitle">
+              A single view for storage health, smart home status, and secure remote file access.
+            </p>
+            <div class="hero__meta">
+              <div>
+                <span class="label">System Status</span>
+                <span class="value">All services online</span>
+              </div>
+              <div>
+                <span class="label">Last Sync</span>
+                <span class="value">2 minutes ago</span>
+              </div>
+              <div>
+                <span class="label">Alerts</span>
+                <span class="value">0 critical</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__actions">
+            <button class="primary">Open TrueNAS Console</button>
+            <button class="ghost">Configure Widgets</button>
+          </div>
+        </header>
+
+        <main>
+      <section class="tab-bar">
+        <div class="tabs">
+          <button class="tab active">Overview</button>
+          <button class="tab">NAS &amp; Storage</button>
+          <button class="tab">Smart Home</button>
+          <button class="tab">Remote Access</button>
+        </div>
+        <div class="tab-hint">
+          <span class="label">Tabbed Layout</span>
+          <span class="value">Placeholders · No wiring yet</span>
+        </div>
+      </section>
+
+      <section class="utility-bar">
+        <div class="search">
+          <span class="label">Global Search</span>
+          <div class="search__field">
+            <span>🔎</span>
+            <input type="text" placeholder="Search datasets, snapshots, devices, automations..." />
+          </div>
+        </div>
+        <div class="status-cards">
+          <div class="status-card">
+            <span class="label">Notifications</span>
+            <span class="value">2 info · 1 warning</span>
+          </div>
+          <div class="status-card">
+            <span class="label">Remote Latency</span>
+            <span class="value">28 ms avg</span>
+          </div>
+          <div class="status-card">
+            <span class="label">Storage Forecast</span>
+            <span class="value">24 days to 80%</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <div class="action-card">
+          <span class="icon">🧽</span>
+          <div>
+            <strong>Run scrub now</strong>
+            <p>Start a pool scrub for all disks</p>
+          </div>
+          <button class="ghost">Queue</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">📸</span>
+          <div>
+            <strong>Create snapshot</strong>
+            <p>Quick snapshot of critical datasets</p>
+          </div>
+          <button class="ghost">Create</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">🔁</span>
+          <div>
+            <strong>Restart app</strong>
+            <p>Restart Plex, HA, and VPN services</p>
+          </div>
+          <button class="ghost">Restart</button>
+        </div>
+        <div class="action-card">
+          <span class="icon">☁️</span>
+          <div>
+            <strong>Start backup</strong>
+            <p>Trigger offsite replication now</p>
+          </div>
+          <button class="ghost">Start</button>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card alert-panel">
+          <div class="card__header">
+            <h2>Notification Center</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <div class="alert-list">
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Pool scrub overdue</strong>
+                <p>Last scrub completed 9 days ago</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Smart Home firmware update</strong>
+                <p>3 devices ready for update</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Remote access onboarding</strong>
+                <p>Custom domain verified</p>
+              </div>
+            </div>
+          </div>
+          <button class="ghost full">Open notifications</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>What Changed Recently</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="timeline compact">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Dataset policy updated</strong>
+                <p>Retention extended to 90 days</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Automation updated</strong>
+                <p>Night mode now triggers at 10:45 PM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Security posture check</strong>
+                <p>MFA enforced for all remote access</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Top Alerts</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="alert-list">
+            <div class="alert danger">
+              <span>🔥</span>
+              <div>
+                <strong>Disk 4 temperature spike</strong>
+                <p>Peak 42°C · check airflow</p>
+              </div>
+            </div>
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Backup queue behind</strong>
+                <p>2 jobs delayed by 45 minutes</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>✅</span>
+              <div>
+                <strong>Scrub completed</strong>
+                <p>0 errors found</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Upcoming Maintenance</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="timeline compact">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>UPS battery test</strong>
+                <p>Friday · 10:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>OS update window</strong>
+                <p>Saturday · 1:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>SMART long test</strong>
+                <p>Sunday · 2:30 AM</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>NAS &amp; Storage</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>NAS Overview</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <p class="card__subtitle">Storage, usage, performance, and health indicators.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Used Capacity</span>
+              <span class="value">62% of 48 TB</span>
+            </div>
+            <div>
+              <span class="label">IOPS</span>
+              <span class="value">3.1k read / 1.4k write</span>
+            </div>
+            <div>
+              <span class="label">Snapshots</span>
+              <span class="value">428 retained</span>
+            </div>
+            <div>
+              <span class="label">Network</span>
+              <span class="value">1.6 Gb/s peak</span>
+            </div>
+          </div>
+          <div class="bar">
+            <span style="width: 62%"></span>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">Capacity trend (30 days)</span>
+            <div class="sparkline__bars">
+              <span style="height: 35%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 68%"></span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Pool Health</span>
+              <strong>Optimal</strong>
+            </div>
+            <div>
+              <span>RAID Layout</span>
+              <strong>RAIDZ2 · 6 disks</strong>
+            </div>
+            <div>
+              <span>Drive Temps</span>
+              <strong>28–32°C</strong>
+            </div>
+            <div>
+              <span>Last Scrub</span>
+              <strong>3 days ago</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Storage &amp; Datasets</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Top datasets by usage and growth trends.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Media</span>
+              <span>19.2 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Backups</span>
+              <span>11.8 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Smart Home Logs</span>
+              <span>4.9 TB</span>
+            </div>
+            <div class="stack__item">
+              <span>Projects</span>
+              <span>2.6 TB</span>
+            </div>
+          </div>
+          <button class="ghost full">View dataset explorer</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Snapshots &amp; Replication</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Retention schedules and offsite protection.</p>
+          <div class="timeline">
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Hourly snapshots</strong>
+                <p>Retain last 48 hours</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Daily replication</strong>
+                <p>Sync to offsite NAS at 2:00 AM</p>
+              </div>
+            </div>
+            <div>
+              <span class="dot"></span>
+              <div>
+                <strong>Cloud archive</strong>
+                <p>Weekly cold storage export</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Capacity Forecast</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Predictive view of storage growth.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Growth Rate</span>
+              <span class="value">+1.8 TB / month</span>
+            </div>
+            <div>
+              <span class="label">Time to 80%</span>
+              <span class="value">24 days</span>
+            </div>
+            <div>
+              <span class="label">Time to Full</span>
+              <span class="value">4.2 months</span>
+            </div>
+          </div>
+          <div class="heatmap">
+            <span>Usage Heatmap (weeks)</span>
+            <div class="heatmap__grid">
+              <span class="h1"></span><span class="h2"></span><span class="h3"></span><span class="h2"></span><span class="h4"></span><span class="h5"></span><span class="h4"></span>
+              <span class="h1"></span><span class="h2"></span><span class="h2"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span>
+              <span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span><span class="h6"></span>
+            </div>
+          </div>
+          <div class="line-chart">
+            <span class="sparkline__label">Capacity forecast line</span>
+            <div class="line-chart__plot">
+              <span style="height: 30%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 46%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 64%"></span>
+              <span style="height: 70%"></span>
+              <span style="height: 74%"></span>
+              <span style="height: 78%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Disk &amp; RAID Health</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Per-disk SMART status and RAID alerts.</p>
+          <div class="chip-row">
+            <span class="chip ok">Disk 1 · OK</span>
+            <span class="chip ok">Disk 2 · OK</span>
+            <span class="chip ok">Disk 3 · OK</span>
+            <span class="chip warn">Disk 4 · 1 warning</span>
+            <span class="chip ok">Disk 5 · OK</span>
+            <span class="chip ok">Disk 6 · OK</span>
+          </div>
+          <div class="list">
+            <div>
+              <span>RAID Status</span>
+              <strong>RAIDZ2 · Resilver 0%</strong>
+            </div>
+            <div>
+              <span>SMART Alerts</span>
+              <strong>1 pending sector</strong>
+            </div>
+            <div>
+              <span>Temp Range</span>
+              <strong>28–34°C</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Storage Map</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Drive bay visualization with health color coding.</p>
+          <div class="storage-map">
+            <div class="drive ok">1</div>
+            <div class="drive ok">2</div>
+            <div class="drive ok">3</div>
+            <div class="drive warn">4</div>
+            <div class="drive ok">5</div>
+            <div class="drive ok">6</div>
+            <div class="drive ok">7</div>
+            <div class="drive ok">8</div>
+          </div>
+          <div class="legend">
+            <span><span class="dot ok"></span>Healthy</span>
+            <span><span class="dot warn"></span>Warning</span>
+            <span><span class="dot danger"></span>Critical</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Performance Hotspots</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Top datasets and services consuming I/O.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Media Library</span>
+              <span>42% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>VM Host</span>
+              <span>27% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>Backup Jobs</span>
+              <span>18% I/O</span>
+            </div>
+            <div class="stack__item">
+              <span>Smart Home Logs</span>
+              <span>9% I/O</span>
+            </div>
+          </div>
+          <button class="ghost full">Open performance analyzer</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Backup Coverage</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Protection status across critical datasets.</p>
+          <div class="donut-row">
+            <div class="donut" style="--percent: 82">
+              <span>82%</span>
+              <small>Protected</small>
+            </div>
+            <div class="donut warn" style="--percent: 58">
+              <span>58%</span>
+              <small>Offsite</small>
+            </div>
+            <div class="donut danger" style="--percent: 24">
+              <span>24%</span>
+              <small>Needs action</small>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Protected</span>
+              <strong>8 datasets</strong>
+            </div>
+            <div>
+              <span>Unprotected</span>
+              <strong>2 datasets</strong>
+            </div>
+            <div>
+              <span>Last Offsite Sync</span>
+              <strong>4 hours ago</strong>
+            </div>
+          </div>
+          <div class="progress-list">
+            <div>
+              <span>Media</span>
+              <div class="bar"><span style="width: 100%"></span></div>
+            </div>
+            <div>
+              <span>Projects</span>
+              <div class="bar"><span style="width: 72%"></span></div>
+            </div>
+            <div>
+              <span>Home Assistant</span>
+              <div class="bar warn"><span style="width: 35%"></span></div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>Smart Home</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>Smart Home Overview</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <p class="card__subtitle">Rooms, automations, security, and energy insights.</p>
+          <div class="grid-mini">
+            <div>
+              <span class="label">Active Devices</span>
+              <span class="value">86 online</span>
+            </div>
+            <div>
+              <span class="label">Energy Today</span>
+              <span class="value">18.4 kWh</span>
+            </div>
+            <div>
+              <span class="label">Security</span>
+              <span class="value">Armed · 12 sensors</span>
+            </div>
+            <div>
+              <span class="label">Scenes</span>
+              <span class="value">7 scheduled</span>
+            </div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Living Room</span>
+              <strong>23°C · Lights 40%</strong>
+            </div>
+            <div>
+              <span>Kitchen</span>
+              <strong>HVAC Eco · Air quality OK</strong>
+            </div>
+            <div>
+              <span>Outdoor</span>
+              <strong>3 cameras streaming</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Room-by-Room Status</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="room-grid">
+            <div class="room-tile">
+              <strong>Living Room</strong>
+              <span>Lights 40% · 23°C</span>
+              <span class="pill ok">Motion</span>
+            </div>
+            <div class="room-tile">
+              <strong>Kitchen</strong>
+              <span>Air quality OK · HVAC Eco</span>
+              <span class="pill">Idle</span>
+            </div>
+            <div class="room-tile">
+              <strong>Garage</strong>
+              <span>Door open · 18°C</span>
+              <span class="pill warn">Alert</span>
+            </div>
+            <div class="room-tile">
+              <strong>Bedroom</strong>
+              <span>Sleep mode · 21°C</span>
+              <span class="pill ok">Quiet</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Critical Sensors</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Alerts from safety and security sensors.</p>
+          <div class="alert-list">
+            <div class="alert danger">
+              <span>🚨</span>
+              <div>
+                <strong>Water leak detected</strong>
+                <p>Basement sensor triggered 4 minutes ago</p>
+              </div>
+            </div>
+            <div class="alert warning">
+              <span>⚠️</span>
+              <div>
+                <strong>Garage open</strong>
+                <p>Open for 2 hours</p>
+              </div>
+            </div>
+            <div class="alert info">
+              <span>ℹ️</span>
+              <div>
+                <strong>Smoke detectors OK</strong>
+                <p>All 6 detectors online</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Automation Queue</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Upcoming workflows synced with NAS events.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Night Mode</span>
+              <span>10:30 PM</span>
+            </div>
+            <div class="stack__item">
+              <span>Snapshot Cleanup</span>
+              <span>11:00 PM</span>
+            </div>
+            <div class="stack__item">
+              <span>Media Library Refresh</span>
+              <span>2:00 AM</span>
+            </div>
+          </div>
+          <button class="ghost full">Manage automations</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Automation Health</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Latency and failures across routines.</p>
+          <div class="stats">
+            <div>
+              <span class="label">Failed Today</span>
+              <span class="value">2 routines</span>
+            </div>
+            <div>
+              <span class="label">Avg Latency</span>
+              <span class="value">1.8s</span>
+            </div>
+            <div>
+              <span class="label">Queued Jobs</span>
+              <span class="value">4 pending</span>
+            </div>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">Automation latency</span>
+            <div class="sparkline__bars">
+              <span style="height: 20%"></span>
+              <span style="height: 28%"></span>
+              <span style="height: 35%"></span>
+              <span style="height: 22%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 30%"></span>
+              <span style="height: 26%"></span>
+              <span style="height: 34%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Camera Preview</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="camera-grid">
+            <div class="camera-feed">
+              <span>Front Door</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Backyard</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Garage</span>
+              <div class="camera-skeleton"></div>
+            </div>
+            <div class="camera-feed">
+              <span>Living Room</span>
+              <div class="camera-skeleton"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Presence &amp; Occupancy</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">House status and occupancy breakdown.</p>
+          <div class="chip-row">
+            <span class="chip ok">Mode · Home</span>
+            <span class="chip">Rooms occupied · 4</span>
+            <span class="chip">Guests · 1</span>
+          </div>
+          <div class="list">
+            <div>
+              <span>Living Room</span>
+              <strong>Occupied</strong>
+            </div>
+            <div>
+              <span>Office</span>
+              <strong>Occupied</strong>
+            </div>
+            <div>
+              <span>Bedroom</span>
+              <strong>Vacant</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Energy Usage</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Daily consumption and peak hours.</p>
+          <div class="sparkline">
+            <span class="sparkline__label">Weekly energy (kWh)</span>
+            <div class="sparkline__bars">
+              <span style="height: 28%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 42%"></span>
+              <span style="height: 48%"></span>
+              <span style="height: 54%"></span>
+              <span style="height: 62%"></span>
+              <span style="height: 58%"></span>
+              <span style="height: 46%"></span>
+            </div>
+          </div>
+          <div class="heatmap">
+            <span>Peak hours heatmap</span>
+            <div class="heatmap__grid">
+              <span class="h1"></span><span class="h2"></span><span class="h2"></span><span class="h3"></span><span class="h4"></span><span class="h4"></span><span class="h5"></span>
+              <span class="h1"></span><span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h5"></span>
+              <span class="h2"></span><span class="h3"></span><span class="h3"></span><span class="h4"></span><span class="h5"></span><span class="h6"></span><span class="h6"></span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid tab-section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Tab</p>
+            <h2>Remote Access</h2>
+          </div>
+          <span class="badge muted">Placeholder grouping</span>
+        </div>
+        <article class="card highlight">
+          <div class="card__header">
+            <h2>Remote Access Status</h2>
+            <span class="badge">Live Placeholder</span>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="label">Endpoint</span>
+              <span class="value">vpn.your-domain.com</span>
+            </div>
+            <div>
+              <span class="label">Uptime</span>
+              <span class="value">99.98%</span>
+            </div>
+            <div>
+              <span class="label">Active Sessions</span>
+              <span class="value">6 users</span>
+            </div>
+          </div>
+          <div class="bar"><span style="width: 92%"></span></div>
+          <div class="skeleton-row">
+            <span class="skeleton"></span>
+            <span class="skeleton"></span>
+            <span class="skeleton"></span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__header">
+            <h2>Secure File Access</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Remote access hub for web, mobile, and API clients.</p>
+          <div class="list">
+            <div>
+              <span>Custom Domain</span>
+              <strong>your-domain.com</strong>
+            </div>
+            <div>
+              <span>Security Layer</span>
+              <strong>Zero Trust + MFA</strong>
+            </div>
+            <div>
+              <span>Access Methods</span>
+              <strong>Web UI · SFTP · WebDAV</strong>
+            </div>
+            <div>
+              <span>SSL Status</span>
+              <strong>Ready for provisioning</strong>
+            </div>
+          </div>
+          <button class="primary full">Plan remote access</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Access Audit</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Recent logins and suspicious activity.</p>
+          <div class="stack">
+            <div class="stack__item">
+              <span>New login · iOS</span>
+              <span>Seattle · 12 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Failed login</span>
+              <span>Berlin · 1 hour ago</span>
+            </div>
+            <div class="stack__item">
+              <span>API token refresh</span>
+              <span>Home network · 3 hours ago</span>
+            </div>
+          </div>
+          <button class="ghost full">Review audit logs</button>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Recent File Activity</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="stack">
+            <div class="stack__item">
+              <span>Edited · /Projects/Designs</span>
+              <span>2 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Uploaded · /Media/2024</span>
+              <span>18 min ago</span>
+            </div>
+            <div class="stack__item">
+              <span>Shared · /Backups/Offsite</span>
+              <span>1 hour ago</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Security Checklist</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Hardening tasks for remote access.</p>
+          <div class="checklist">
+            <div class="check ok"><span>✓</span> MFA enforced</div>
+            <div class="check ok"><span>✓</span> SSL certificate valid</div>
+            <div class="check warn"><span>!</span> WAF rules pending</div>
+            <div class="check warn"><span>!</span> Geo-fencing disabled</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Most Accessed Datasets</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="progress-list">
+            <div>
+              <span>Media</span>
+              <div class="bar"><span style="width: 92%"></span></div>
+            </div>
+            <div>
+              <span>Projects</span>
+              <div class="bar"><span style="width: 68%"></span></div>
+            </div>
+            <div>
+              <span>SmartHome</span>
+              <div class="bar warn"><span style="width: 48%"></span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Remote Access Latency</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <p class="card__subtitle">Endpoint responsiveness by region.</p>
+          <div class="stats">
+            <div>
+              <span class="label">US West</span>
+              <span class="value">28 ms</span>
+            </div>
+            <div>
+              <span class="label">US East</span>
+              <span class="value">41 ms</span>
+            </div>
+            <div>
+              <span class="label">EU Central</span>
+              <span class="value">86 ms</span>
+            </div>
+          </div>
+          <div class="sparkline">
+            <span class="sparkline__label">24h latency</span>
+            <div class="sparkline__bars">
+              <span style="height: 30%"></span>
+              <span style="height: 32%"></span>
+              <span style="height: 36%"></span>
+              <span style="height: 40%"></span>
+              <span style="height: 38%"></span>
+              <span style="height: 34%"></span>
+              <span style="height: 28%"></span>
+              <span style="height: 26%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2>Login Location Map</h2>
+            <span class="badge muted">Placeholder</span>
+          </div>
+          <div class="map">
+            <div class="map__pin pin-1"></div>
+            <div class="map__pin pin-2"></div>
+            <div class="map__pin pin-3"></div>
+          </div>
+          <div class="list">
+            <div>
+              <span>Seattle</span>
+              <strong>3 sessions</strong>
+            </div>
+            <div>
+              <span>Berlin</span>
+              <strong>1 blocked</strong>
+            </div>
+            <div>
+              <span>Toronto</span>
+              <strong>2 sessions</strong>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="footer-grid">
+        <article class="card small">
+          <h3>Alerts &amp; Tasks</h3>
+          <ul>
+            <li>No critical alerts</li>
+            <li>2 informational notifications</li>
+            <li>Next scrub scheduled for Friday</li>
+          </ul>
+        </article>
+        <article class="card small">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>Dataset Manager</li>
+            <li>Snapshot Policy</li>
+            <li>Home Assistant</li>
+            <li>VPN &amp; Access</li>
+          </ul>
+        </article>
+        <article class="card small">
+          <h3>Ideas for Next Iteration</h3>
+          <ul>
+            <li>Interactive storage map</li>
+            <li>Live camera tiles</li>
+            <li>Automations health heatmap</li>
+            <li>File access onboarding wizard</li>
+          </ul>
+        </article>
+      </section>
+      </main>
+    </div>
+  </div>
+  </body>
+</html>
